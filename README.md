@@ -273,11 +273,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   - Developed comprehensive training pipeline with noise injection for robust generalization.
   - *Work supported by dataset preparation and preprocessing was collaborative work.*
 
-- **Mahi Kamaleldin** <mahi@innosoft.sa>
-  - Developed and executed test cases for API endpoints and model predictions.
-  - Automated regression testing and monitored model performance.
-  - Provided feedback on usability and robustness of the API.
-  - *Work supported by dataset preparation and preprocessing was collaborative work.*
+
 
 - **Nada Alghamdi** <nada.alghamdi@innosoft.sa>
   - Led the development and implementation of the **LSTM-Based Sentiment Classification** model.
@@ -286,6 +282,14 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   - Developed comprehensive evaluation pipeline with focus on realistic performance metrics.
   - *Work supported by dataset preparation and preprocessing was collaborative work.*
 
+
+- **Mahi Kamaleldin** <mahi@innosoft.sa>
+  - Developed and executed test cases for API endpoints and model predictions.
+  - Automated regression testing and monitored model performance.
+  - Provided feedback on usability and robustness of the API.
+  - *Work supported by dataset preparation and preprocessing was collaborative work.*
+
+  
 ### Additional Technical Documentation
 
 ## **Hasan Alhalees** - CNN Technical Details
