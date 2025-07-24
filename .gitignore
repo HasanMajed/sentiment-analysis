@@ -1,0 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# VSCode specific files
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment variables files
+.env
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
