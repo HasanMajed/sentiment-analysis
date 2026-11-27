@@ -1,23 +1,14 @@
-# custom-ai-model
+# Arabic/English Sentiment Analysis API
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](link-to-build)
-[![Open Issues](https://img.shields.io/github/issues/your-org/custom-ai-model)](link-to-issues)
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-009688?logo=fastapi&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ensemble-F7931E?logo=scikitlearn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN%20%2B%20BiLSTM-FF6F00?logo=tensorflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 
 ## Project Overview
 
-**custom-ai-model** is a collaborative sentiment analysis   - Don't blindly trust high accuracy - always validate with realistic, noisy inputs.
-
----
-
-## **Nada Alghamdi** - LSTM Technical Details
-### LSTM-Based Sentiment Classification
-
-This repository contains a custom implementation of a deep **Bidirectional LSTM model** for sentiment analysis. The model classifies multilingual reviews - including Arabic, English, and emoji-only entries - into **positive**, **negative**, or **neutral** categories. The architecture is designed to effectively capture the temporal and contextual patterns in the text, while minimizing overfitting and maximizing generalization.
-
-#### Project Overview
-
-The LSTM model is part of a broader sentiment analysis pipeline. It was trained using a carefully preprocessed and balanced dataset. The architecture was tuned to improve generalization and ensure realistic accuracy metrics - especially on the **neutral** class, which often suffers in multiclass classification.designed to predict the sentiment of text data using a variety of machine learning models. The project aims to provide robust, accurate, and scalable sentiment analysis APIs for both English and Arabic text, leveraging ensemble learning and advanced preprocessing techniques. The system is designed for extensibility, allowing easy integration of new models and preprocessing steps. The target audience includes data scientists, NLP researchers, software engineers, and organizations seeking to integrate advanced sentiment analysis into their products or research workflows. The project emphasizes teamwork, code quality, and reproducibility, with a focus on real-world applicability and multilingual support.
+A collaborative sentiment analysis project that classifies reviews written in **Arabic, English, or emoji only** as **positive**, **negative**, or **neutral**. It is designed to predict the sentiment of text data using a variety of machine learning models, plus custom CNN and Bidirectional LSTM deep learning models. The project aims to provide robust, accurate, and scalable sentiment analysis APIs for both English and Arabic text, leveraging ensemble learning and advanced preprocessing techniques. The system is designed for extensibility, allowing easy integration of new models and preprocessing steps. The target audience includes data scientists, NLP researchers, software engineers, and organizations seeking to integrate advanced sentiment analysis into their products or research workflows. The project emphasizes teamwork, code quality, and reproducibility, with a focus on real-world applicability and multilingual support.
 
 ## Key Features
 
@@ -76,8 +67,8 @@ flowchart TD
 
 1. **Clone the repository:**
    ```bash
-   git clone https://your-repo-url.git
-   cd custom-ai-model
+   git clone https://github.com/HasanMajed/sentiment-analysis.git
+   cd sentiment-analysis
    ```
 
 2. **Create and activate a virtual environment:**
@@ -113,15 +104,15 @@ flowchart TD
 6. **(Optional) Run with Docker:**
    - Build and run the container:
      ```bash
-     docker build -t custom-ai-model .
-     docker run -p 8000:8000 custom-ai-model
+     docker build -t sentiment-analysis .
+     docker run -p 8000:8000 sentiment-analysis
      ```
 
 ## Usage Instructions
 
 1. **Run the API server:**
    ```bash
-   uvicorn app.best-api:app --reload
+   uvicorn app.best_api:app --reload
    ```
    Or for other APIs:
    ```bash
@@ -172,11 +163,10 @@ flowchart TD
 
 - **POST** `/api/v1/batch-analysis`
   - **Description:** Predict sentiment in bulk, by taking a csv file with a text column.
-  - **Request Body:** multiform/data
+  - **Request Body:** `multipart/form-data` (CSV file upload)
 
-
-- **2 endpoints** accept a JSON body with a `text` field and return a JSON response with the predicted sentiment and confidence score.
--**1 endpoint accepts csv files.
+- **`/api/v1/text-analysis`** accepts a JSON body with a `text` field and returns the predicted sentiment and confidence score.
+- **`/api/v1/batch-analysis`** accepts a CSV file.
 - **Interactive documentation** is available at `/docs`.
 
 ## Environment Variables
@@ -223,7 +213,7 @@ We welcome contributions from all team members and the community!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. You are free to use, modify, and distribute this software with attribution.
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software with attribution.
 
 ## Acknowledgments
 
@@ -273,8 +263,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   - Developed comprehensive training pipeline with noise injection for robust generalization.
   - *Work supported by dataset preparation and preprocessing was collaborative work.*
 
-
-
 - **Nada Alghamdi** <nada.alghamdi@innosoft.sa>
   - Led the development and implementation of the **LSTM-Based Sentiment Classification** model.
   - Designed and built custom Bidirectional LSTM architecture from scratch using TensorFlow/Keras.
@@ -282,15 +270,15 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   - Developed comprehensive evaluation pipeline with focus on realistic performance metrics.
   - *Work supported by dataset preparation and preprocessing was collaborative work.*
 
-
 - **Mahi Kamaleldin** <mahi@innosoft.sa>
   - Developed and executed test cases for API endpoints and model predictions.
   - Automated regression testing and monitored model performance.
   - Provided feedback on usability and robustness of the API.
   - *Work supported by dataset preparation and preprocessing was collaborative work.*
 
-  
-### Additional Technical Documentation
+---
+
+# Additional Technical Documentation
 
 ## **Hasan Alhalees** - CNN Technical Details
 ### CNN-Based Sentiment Classification
@@ -373,7 +361,7 @@ The goal is to classify reviews into **positive**, **negative**, or **neutral** 
     ```
 
   2. **Run Training**
-    - Open `cnn.ipynb`
+    - Open `notebooks/deep-learning/cnn.ipynb`
     - Set dataset path and parameters
     - Run all cells
 
@@ -386,7 +374,10 @@ The goal is to classify reviews into **positive**, **negative**, or **neutral** 
   - Attention to noise, overfitting, and architecture flexibility is essential.
   - Don’t blindly trust high accuracy — always validate with realistic, noisy inputs.
 
+---
 
+## **Nada Alghamdi** - LSTM Technical Details
+### LSTM-Based Sentiment Classification
 
 This repository contains a custom implementation of a deep **Bidirectional LSTM model** for sentiment analysis. The model classifies multilingual reviews - including Arabic, English, and emoji-only entries - into **positive**, **negative**, or **neutral** categories. The architecture is designed to effectively capture the temporal and contextual patterns in the text, while minimizing overfitting and maximizing generalization.
 
@@ -463,7 +454,7 @@ The LSTM model is part of a broader sentiment analysis pipeline. It was trained 
     ```
 
   2. **Train the Model**
-    - Open `lstm.ipynb`
+    - Open `notebooks/deep-learning/lstm.ipynb`
     - Set dataset paths and parameters
     - Run all cells
 
